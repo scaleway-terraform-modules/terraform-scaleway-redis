@@ -39,8 +39,8 @@ variable "project_id" {
   default     = null
 }
 
-variable "region" {
-  description = "Region in which the namespace should be created. Ressource will be created in the region set at the provider level if null."
+variable "zone" {
+  description = "The zone in which the Redis Cluster should be created. Ressource will be created in the zone set at the provider level if null."
   type        = string
   default     = null
 }
