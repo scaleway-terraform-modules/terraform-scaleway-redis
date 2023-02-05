@@ -13,7 +13,7 @@ resource "scaleway_redis_cluster" "this" {
   password    = var.user_password
 
   # Cluster location
-  zone     = var.zone
+  zone       = var.zone
   project_id = var.project_id
 
   # Network ACLs
