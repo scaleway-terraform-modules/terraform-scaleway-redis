@@ -24,4 +24,12 @@ resource "scaleway_redis_cluster" "this" {
       description = acl.value["description"]
     }
   }
+
+  dynamic "private_network" {
+    for_each = var.private_network != null ? [1] : []
+    content {
+      id          = try(var.private_network.id, null)
+      service_ips = try(var.private_network.service_ips, null)
+    }
+  }
 }

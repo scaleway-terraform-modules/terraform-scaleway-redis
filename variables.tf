@@ -33,6 +33,15 @@ variable "network_acls" {
   }]
 }
 
+variable "private_network" {
+  description = "Describes the private network you want to connect to your cluster. If not set, a public network will be provided."
+  type = object({
+    id          = string
+    service_ips = list(string)
+  })
+  default = null
+}
+
 variable "project_id" {
   description = "ID of the project the namespace is associated with. Ressource will be created in the project set at the provider level if null."
   type        = string
