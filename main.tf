@@ -18,7 +18,7 @@ resource "scaleway_redis_cluster" "this" {
 
   # Settings
   settings = var.settings
-  
+
   # Network ACLs
   dynamic "acl" {
     for_each = var.private_network != null ? [] : var.network_acls
