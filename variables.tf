@@ -37,7 +37,7 @@ variable "private_network" {
   description = "Describes the private network you want to connect to your cluster. If not set, a public network will be provided."
   type = object({
     id          = string
-    service_ips = list(string)
+    service_ips = optional(list(string))
   })
   default = null
 }
@@ -52,6 +52,12 @@ variable "zone" {
   description = "The zone in which the Redis Cluster should be created. Ressource will be created in the zone set at the provider level if null."
   type        = string
   default     = null
+}
+
+variable "settings" {
+  description = "Optional map of settings for the Redis™ cluster. Refer to Scaleway API/CLI for valid settings."
+  type        = map(string)
+  default     = {}
 }
 
 variable "tags" {
