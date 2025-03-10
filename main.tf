@@ -16,9 +16,12 @@ resource "scaleway_redis_cluster" "this" {
   zone       = var.zone
   project_id = var.project_id
 
+  # Settings
+  settings = var.settings
+
   # Network ACLs
   dynamic "acl" {
-    for_each = var.network_acls
+    for_each = var.private_network != null ? [] : var.network_acls
     content {
       ip          = acl.value["ip"]
       description = acl.value["description"]
