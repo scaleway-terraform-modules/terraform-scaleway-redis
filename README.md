@@ -44,7 +44,7 @@ module "my_cluster" {
 | <a name="input_network_acls"></a> [network_acls](#input_network_acls) | List of acl rules (ie IP addresses authorized to connect to the cluster). | ```list(object({ ip = string description = string }))``` | ```[ { "description": "Allow all", "ip": "0.0.0.0/0" } ]``` | no |
 | <a name="input_private_network"></a> [private_network](#input_private_network) | Describes the private network you want to connect to your cluster. If not set, a public network will be provided. | ```object({ id = string service_ips = optional(list(string)) })``` | `null` | no |
 | <a name="input_project_id"></a> [project_id](#input_project_id) | ID of the project the namespace is associated with. Ressource will be created in the project set at the provider level if null. | `string` | `null` | no |
-| <a name="input_settings"></a> [settings](#input_settings) | Optional map of settings for the Redis™ cluster. Refer to Scaleway API/CLI for valid settings. | `map(string)` | `{}` | no |
+| <a name="input_settings"></a> [settings](#input_settings) | Optional map of settings for the Redis™ cluster. Refer to Scaleway API/CLI for valid settings. | `map(string)` | `null` | no |
 | <a name="input_tags"></a> [tags](#input_tags) | Tags associated with the server and dedicated ip address. | `list(string)` | `[]` | no |
 | <a name="input_tls_enabled"></a> [tls_enabled](#input_tls_enabled) | Whether TLS is enabled or not. | `bool` | `true` | no |
 | <a name="input_zone"></a> [zone](#input_zone) | The zone in which the Redis Cluster should be created. Ressource will be created in the zone set at the provider level if null. | `string` | `null` | no |
