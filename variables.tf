@@ -57,7 +57,7 @@ variable "zone" {
 variable "settings" {
   description = "Optional map of settings for the Redis™ cluster. Refer to Scaleway API/CLI for valid settings."
   type        = map(string)
-  default     = {}
+  default     = null
 }
 
 variable "tags" {
