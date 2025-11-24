@@ -59,8 +59,8 @@ module "my_cluster" {
 
 ## Authors
 
-Module is maintained with help from [the community](https://github.com/scaleway-terraform-modules/terraform-scaleway-domain/graphs/contributors).
+Module is maintained with help from [the community](https://github.com/scaleway-terraform-modules/terraform-scaleway-redis/graphs/contributors).
 
 ## License
 
-Mozilla Public License 2.0 Licensed. See [LICENSE](https://github.com/scaleway-terraform-modules/terraform-scaleway-domain/tree/master/LICENSE) for full details.
+Mozilla Public License 2.0 Licensed. See [LICENSE](https://github.com/scaleway-terraform-modules/terraform-scaleway-redis/tree/master/LICENSE) for full details.
