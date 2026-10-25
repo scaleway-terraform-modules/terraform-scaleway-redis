@@ -12,7 +12,7 @@ This repository is used to manage a Redis cluster on scaleway using terraform.
 ```hcl
 module "my_cluster" {
   source  = "scaleway-terraform-modules/redis/scaleway"
-  version = "0.0.1"
+  version = "~> 0.2"
 
 }
 ```
